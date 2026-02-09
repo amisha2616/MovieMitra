@@ -1,0 +1,49 @@
+.mood-section {
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+/* Heading matches other section headings */
+.mood-heading {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #c6de41;
+}
+
+/* Grid matches movie card layout */
+.mood-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mood-grid li {
+    display: flex;
+}
+
+/* Button behaves like a card */
+.mood-card {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #c6de41;
+    font-weight: 600;
+}
+
+.mood-card:hover {
+    background: #222;
+}
+
+.mood-card.active {
+    background: #c6de41;
+    color: #153b44;
+}
