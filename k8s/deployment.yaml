@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moviemitra-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: moviemitra
+  template:
+    metadata:
+      labels:
+        app: moviemitra
+    spec:
+      containers:
+        - name: moviemitra
+          image: amishanam/moviemitra-app:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
